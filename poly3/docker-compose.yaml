@@ -1,0 +1,28 @@
+version: '2'
+services:
+  apiGateway:
+   image: "javaspring:latest"
+   ports:
+       - "8082:8082"
+#   network_mode: "host" 
+  postgres:
+   image: "postgres:latest"
+#   network_mode: "host"
+  raidService:
+   image: "kotlinservice:latest"
+   ports:
+       - "8080"
+  messagebroker:
+   image: rabbitmq
+   ports:
+       - "5671"
+       - "5672"
+   environment:
+       - RABBITMQ_DEFAULT_USER=spring
+       - RABBITMQ_DEFAULT_PASS=spring
+
+  rpcserver:
+   image: "pythonrabbitserver:latest"
+   ports: 
+       - "5000"
+       

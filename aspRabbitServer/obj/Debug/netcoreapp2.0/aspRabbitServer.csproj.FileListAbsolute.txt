@@ -1,0 +1,10 @@
+/home/pinguin/Dokumente/Code/dotnetCode/aspRabbitServer/bin/Debug/netcoreapp2.0/aspRabbitServer.deps.json
+/home/pinguin/Dokumente/Code/dotnetCode/aspRabbitServer/bin/Debug/netcoreapp2.0/aspRabbitServer.runtimeconfig.json
+/home/pinguin/Dokumente/Code/dotnetCode/aspRabbitServer/bin/Debug/netcoreapp2.0/aspRabbitServer.runtimeconfig.dev.json
+/home/pinguin/Dokumente/Code/dotnetCode/aspRabbitServer/bin/Debug/netcoreapp2.0/aspRabbitServer.dll
+/home/pinguin/Dokumente/Code/dotnetCode/aspRabbitServer/bin/Debug/netcoreapp2.0/aspRabbitServer.pdb
+/home/pinguin/Dokumente/Code/dotnetCode/aspRabbitServer/obj/Debug/netcoreapp2.0/aspRabbitServer.csproj.CoreCompileInputs.cache
+/home/pinguin/Dokumente/Code/dotnetCode/aspRabbitServer/obj/Debug/netcoreapp2.0/aspRabbitServer.AssemblyInfoInputs.cache
+/home/pinguin/Dokumente/Code/dotnetCode/aspRabbitServer/obj/Debug/netcoreapp2.0/aspRabbitServer.AssemblyInfo.cs
+/home/pinguin/Dokumente/Code/dotnetCode/aspRabbitServer/obj/Debug/netcoreapp2.0/aspRabbitServer.dll
+/home/pinguin/Dokumente/Code/dotnetCode/aspRabbitServer/obj/Debug/netcoreapp2.0/aspRabbitServer.pdb

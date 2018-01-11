@@ -1,0 +1,36 @@
+version: '2'
+services:
+  apiGateway:
+   image: "javaspring:latest"
+   ports:
+       - "8082:8082"
+#   network_mode: "host" 
+  postgres:
+   image: "postgres:latest"
+#   network_mode: "host"
+  raidService:
+   image: "djangoservice:latest"
+   ports:
+       - "8080:8080"
+#       - "5672"
+#       - "5671"
+#       - "4369"
+  messagebroker:
+   image: "rabbitmq:3-management"
+   ports:
+       - "5672:5672"
+       - 15672:15672
+       - "5671"
+       - "4369"
+   environment:
+     - RABBITMQ_DEFAULT_USER=spring
+     - RABBITMQ_DEFAULT_PASS=spring
+  rpcserver:
+   image: "dotnetrabbitserver"
+   ports:
+#       - "5672"
+#       - "5671"
+#       - "4369"
+       - "5000"
+ #  network_mode: "host"
+ 
