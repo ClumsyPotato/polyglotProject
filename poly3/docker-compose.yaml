@@ -1,7 +1,7 @@
 version: '2'
 services:
   apiGateway:
-   image: "javaspring:latest"
+   image: "flyingwhale/javaspring:latest"
    ports:
        - "8082:8082"
 #   network_mode: "host" 
@@ -9,7 +9,7 @@ services:
    image: "postgres:latest"
 #   network_mode: "host"
   raidService:
-   image: "kotlinservice:latest"
+   image: "flyingwhale/kotlinservice:latest"
    ports:
        - "8080"
   messagebroker:
@@ -22,7 +22,7 @@ services:
        - RABBITMQ_DEFAULT_PASS=spring
 
   rpcserver:
-   image: "pythonrabbitserver:latest"
+   image: "flyingwhale/pythonrabbitserver:latest"
    ports: 
        - "5000"
        

@@ -1,13 +1,13 @@
 version: '2'
 services:
    apiGateway:
-    image: "javaspring:latest"
+    image: "flyingwhale/javaspring:latest"
     ports:
         - "8082:8082"
    postgres:
      image: "postgres:latest"
    raidService:
-     image: "goservice:latest"
+     image: "flyingwhale/goservice:latest"
      ports:
         - "8080"
    messagebroker:
@@ -19,6 +19,6 @@ services:
        - RABBITMQ_DEFAULT_USER=spring
        - RABBITMQ_DEFAULT_PASS=spring
    rpcserver:
-     image: "jsrabbitserver:latest"
+     image: "flyingwhale/jsrabbitserver:latest"
      ports:
         - "5000"
