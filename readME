@@ -2,3 +2,50 @@ Usage
 To use an application you simply run one of the docker-compose files from poly, poly2 or poly3
 	eg: docker-compose up -d docker-compose.yaml
 Note: you need to run the commadn two times because the rpc server is always faster as rabbitmq TODO: fix this
+
+
+Description:
+The Goal of this project was to build a polyglott microservice architecture for reference.
+
+apiGateway: Takes REST request and further calls the raidServie or rpc Server (synchronous/asynchronous)
+raidService: Stores retrives, and deletes raid objects via REST (synchronous)
+rpcServer: remote procedure call Server which sends back Item objects via rabbitmq (asynchronous)
+messageBroker:rabbitmq
+database: postgresql
+
+
+
+
+Application Matrix
+
+       apiGateway       raidService     rpcServer
+poly1  java/spring      python/django  	dotnetCore
+poly2  java/spring  	go      	js/nodejs
+poly3  java/spring  	spring/kotlin  	python
+
+
+
+Used IDEs
+Intelij: java/spring, kotlin/spring
+Pycharm: python/django
+Visual Studio Code: c#/.Net, go, js/nodejs
+
+
+To make changes
+1. Edit the Code
+2. rebuild the docker image with the dockerfile located in each application folder
+3. re-deploy #docker-compose up -d
+
+For changes inside the go application you have to download the "github.com/jinzhu/gorm" library on your local machine 
+
+
+
+Issues
+CorrelationId: In poly1 the rpcServer(dotnetCore) needs to set a arbitrary Correlation Id to successfuly respond to the Client(java/spring)
+Json: The go json parser transforms the attributes of the struct to upper case letters. However, the attributes needs to be lower case to follow the java convention of parsing json strings. To fix this you simply had to specify how the json parser parses the attributes inside the struct with json:<attribute_name>
+
+
+
+Conclusion:
+Beside a few minor problemes it is not very difficult  to programm a polyglott microservice application if you serialize the data in the same way.
+
