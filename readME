@@ -1,7 +1,7 @@
 Usage
 To use an application you simply run one of the docker-compose files from poly, poly2 or poly3
 	eg: docker-compose up -d docker-compose.yaml
-Note: you need to run the commadn two times because the rpc server is always faster as rabbitmq TODO: fix this
+Note: you need to run the commadn two times because the rpc server is always faster as rabbitmq
 
 
 Description:
